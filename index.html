@@ -1,0 +1,528 @@
+# Mitrr
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Happy Birthday Mitrr ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    font-family:Georgia,serif;
+    color:white;
+    background:
+    radial-gradient(circle at center,#66264f 0%,#28132e 45%,#08060d 100%);
+}
+
+.scene{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    opacity:0;
+    visibility:hidden;
+    transform:scale(.92);
+    transition:1s ease;
+}
+
+.scene.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+}
+
+.small{
+    font-size:14px;
+    letter-spacing:3px;
+    opacity:.8;
+}
+
+h1{
+    font-size:clamp(45px,10vw,90px);
+    line-height:1;
+}
+
+h2{
+    font-size:clamp(28px,6vw,50px);
+}
+
+.gold{
+    color:#ffd66b;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 30px;
+    border:0;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff9a75,#ffd27d);
+    color:#35152a;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.gift{
+    font-size:100px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    50%{transform:translateY(-15px)}
+}
+
+.big{
+    width:100%;
+    padding:60px 10px;
+    background:linear-gradient(135deg,#d92551,#ff536c);
+    box-shadow:0 0 80px #ff426655;
+}
+
+.cake{
+    font-size:100px;
+    margin:25px 0;
+    animation:bounce 1.4s infinite;
+}
+
+.balloons{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin:45px 0;
+}
+
+.balloon{
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    animation:float 2s infinite alternate;
+}
+
+.balloon:nth-child(1){background:#ff8eae}
+.balloon:nth-child(2){background:#5ee1df;animation-delay:.4s}
+.balloon:nth-child(3){background:#ffb079;animation-delay:.8s}
+
+@keyframes float{
+    to{transform:translateY(-25px)}
+}
+
+.memory{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.photo{
+    width:180px;
+    height:220px;
+    background:linear-gradient(135deg,#ffc5d3,#d8b5d8);
+    border:8px solid white;
+    color:#713b58;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform:rotate(-4deg);
+    box-shadow:0 15px 40px #0008;
+}
+
+.photo:nth-child(2){
+    transform:rotate(4deg);
+}
+
+.letter{
+    max-width:550px;
+    width:90%;
+    padding:30px;
+    background:#fff6d5;
+    color:#4d3930;
+    text-align:left;
+    line-height:1.7;
+    box-shadow:0 20px 60px #0009;
+}
+
+.sign{
+    text-align:right;
+    margin-top:20px;
+}
+
+.name{
+    color:#ffd15c;
+    font-size:clamp(40px,9vw,80px);
+    font-style:italic;
+}
+
+#stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2}
+    to{opacity:1}
+}
+
+#confetti{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.confetti{
+    position:absolute;
+    width:8px;
+    height:14px;
+    animation:fall 3s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        top:110%;
+        transform:rotate(720deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+<div id="confetti"></div>
+
+<!-- 1 -->
+<section class="scene active">
+<div class="card">
+
+<div class="gift">🎁</div>
+
+<p class="small">A LITTLE SURPRISE FOR</p>
+
+<h2 class="gold">Mitrr</h2>
+
+<p style="margin-top:12px">
+Something special is waiting for you...
+</p>
+
+<button onclick="nextScene()">Open It 💗</button>
+
+</div>
+</section>
+
+
+<!-- 2 -->
+<section class="scene">
+
+<div class="big">
+
+<p class="small">TODAY IS YOUR DAY</p>
+
+<h1>HAPPY<br>BIRTHDAY</h1>
+
+<div style="margin-top:20px;color:#ffd66b">
+✦ ✦ ✦
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 3 -->
+<section class="scene">
+
+<div class="card">
+
+<p class="small">MAKE A WISH ✨</p>
+
+<div class="cake">🎂</div>
+
+<h2 class="gold">
+Happy Birthday, Mitrr!
+</h2>
+
+<p style="margin-top:15px">
+May all your wishes come true ❤️
+</p>
+
+</div>
+
+</section>
+
+
+<!-- 4 -->
+<section class="scene">
+
+<div class="card">
+
+<h2>Something for you 🎈</h2>
+
+<p class="small">
+A few reasons why you're special
+</p>
+
+<div class="balloons">
+
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+</div>
+
+<p style="font-size:20px">
+You're genuinely special, Mitrr. 💗
+</p>
+
+</div>
+
+</section>
+
+
+<!-- 5 -->
+<section class="scene">
+
+<div class="card">
+
+<h2>A Little Memory Lane</h2>
+
+<p class="small">
+Some moments worth remembering ✨
+</p>
+
+<div class="memory">
+
+<div class="photo">
+YOUR PHOTO ❤️
+</div>
+
+<div class="photo">
+YOUR PHOTO ❤️
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 6 -->
+<section class="scene">
+
+<div class="card">
+
+<h2>One Last Thing...</h2>
+
+<div style="font-size:90px;margin:25px">
+💌
+</div>
+
+<p>
+I wrote something especially for you.
+</p>
+
+<button onclick="openLetter()">
+Open Letter 💗
+</button>
+
+</div>
+
+</section>
+
+
+<!-- 7 -->
+<section class="scene">
+
+<div class="letter">
+
+<i>Dear Mitrr,</i>
+
+<br><br>
+
+Happy Birthday ❤️
+
+<br><br>
+
+I don't know how to explain it perfectly,
+but I'm genuinely thankful that you're a part
+of my life.
+
+I hope this new year of your life brings you
+lots of happiness, peace, success and countless
+reasons to smile.
+
+Keep smiling.
+Keep shining.
+And never forget how special you are. ✨
+
+<br><br>
+
+<div class="sign">
+With lots of love 💗
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 8 -->
+<section class="scene">
+
+<div class="card">
+
+<p class="small">
+AND FINALLY...
+</p>
+
+<h1>
+HAPPY<br>BIRTHDAY
+</h1>
+
+<div class="name">
+Mitrr ❤️
+</div>
+
+<p style="margin-top:20px">
+May your smile always stay this beautiful ✨
+</p>
+
+</div>
+
+</section>
+
+
+<script>
+
+const scenes =
+document.querySelectorAll(".scene");
+
+let current = 0;
+
+function nextScene(){
+
+    if(current < scenes.length - 1){
+
+        scenes[current].classList.remove("active");
+
+        current++;
+
+        scenes[current].classList.add("active");
+
+        if(current === scenes.length - 1){
+            createConfetti();
+        }
+
+    }
+
+}
+
+
+function openLetter(){
+
+    scenes[current].classList.remove("active");
+
+    current++;
+
+    scenes[current].classList.add("active");
+
+}
+
+
+for(let i=0;i<80;i++){
+
+    const star = document.createElement("span");
+
+    star.className = "star";
+
+    star.style.left =
+        Math.random()*100 + "%";
+
+    star.style.top =
+        Math.random()*100 + "%";
+
+    star.style.animationDelay =
+        Math.random()*2 + "s";
+
+    document
+        .getElementById("stars")
+        .appendChild(star);
+}
+
+
+function createConfetti(){
+
+    const box =
+        document.getElementById("confetti");
+
+    box.innerHTML="";
+
+    const colors=[
+        "#ffd166",
+        "#ff8fab",
+        "#9bf6ff",
+        "#caffbf",
+        "#ffffff"
+    ];
+
+    for(let i=0;i<120;i++){
+
+        const c =
+            document.createElement("div");
+
+        c.className="confetti";
+
+        c.style.left =
+            Math.random()*100+"%";
+
+        c.style.top="-20px";
+
+        c.style.background =
+            colors[
+                Math.floor(
+                    Math.random()*colors.length
+                )
+            ];
+
+        c.style.animationDuration =
+            (2+Math.random()*3)+"s";
+
+        c.style.animationDelay =
+            Math.random()+"s";
+
+        box.appendChild(c);
+    }
+
+}
+
+</script>
+
+</body>
+  </html>
